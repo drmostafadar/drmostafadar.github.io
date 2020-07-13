@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Oman Offers -  عروض سلطنة عمان </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+<!-- Add icon library - facebook and social media -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Oman Offers - عروض سلطنة عمان </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+        <a class="nav-link" href="OmanOffersWeb-Privacy.html">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+        <a class="nav-link" href="contactUs.html">Contact us</a>
+          </li>
+            <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      
+       <li class="nav-item">
+        <a class="nav-link" href="https://play.google.com/store/apps/details?id=moh.com.darwish.mmd.OmanOffers">Download Android App</a>
+      </li>
+      <li class="nav-item">
+
+                <!-- Add font awesome icons -->
+                <a href="https://www.facebook.com/Oman-Offers-%D8%B9%D8%B1%D9%88%D8%B6-%D8%B3%D9%84%D8%B7%D9%86%D8%A9-%D8%B9%D9%85%D8%A7%D9%86-101107844751025/?ref=page_internal" class="fa fa-facebook nav-link"></a>
+      </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row" >
+
+      
+        
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9" >
+
+          
+      <!-- SlideShow-->
+
+            <div class="slideshow-container" id = "sliderDiv">
+ <!--
+            <div class="mySlides ">
+              <div class="numbertext">1 / 3</div>
+              <img src="https://offers-8.firebaseapp.com/lulu3/mmd-00.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+    
+       
+
+            <div class="mySlides ">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://offers-8.firebaseapp.com/lulu3/mmd-01.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides ">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://offers-8.firebaseapp.com/lulu3/mmd-03.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center" id = "dotsDiv">
+        <!--      <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> -->
+            </div>
+
+      <!-- End SlideShow-->
+
+     
+
+          
+       
+         
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+      
+         <div class="col-lg-3" >
+
+       
+  <!--  <div class="dropdown dropright">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      قائمة  المراكز  التجارية
+    </button>
+  -->
+         <div  id ="titleDiv"> </div> 
+        
+        <div class="list-group" id="cat">
+         <!--  <a href="#" class="list-group-item">Category 1</a>
+         <a href="#" class="list-group-item">Category 2</a>
+          <a href="#" class="list-group-item">Category 3</a>
+       -->
+        </div>
+
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; MOSTAFA DARWISH - OMAN OFFERS APP 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDZeu_DfbqAqalckbfc_iVx8Tz-POO_v3Y",
+    authDomain: "mostafa-7e438.firebaseapp.com",
+    databaseURL: "https://mostafa-7e438.firebaseio.com",
+    projectId: "mostafa-7e438",
+    storageBucket: "mostafa-7e438.appspot.com",
+    messagingSenderId: "874990501198",
+    appId: "1:874990501198:web:c4041e7a4c79dbe7db721f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+ 
+ 
+    
+  
+var rootRef3 =firebase.database().ref().child('HyperIndex/' ).orderByChild("no");
+
+rootRef3.once('value', function(snapshot3) {
+snapshot3.forEach(function(childSnapshot3) {
+var childKey3 = childSnapshot3.key;
+var childData3 = childSnapshot3.val();
+ var index = childData3.index;
+var keyInt=   parseInt(childKey3);
+
+  var catItem ='  <a href="hyperDetailed.html'+"#"+index+'" class="list-group-item list-group-item-action">'+childData3.name+'</a>';
+        var cat = document.getElementById('cat') ;
+        cat.innerHTML+=catItem;
+             
+
+    });
+      });  
+      
+     // get the index from previous page 
+  var indexHash = window.location.hash.substring(1);
+   var keyHsh =  window.location.search.substring(1);
+
+  window.onhashchange=function(){
+    //  window.location.reload();
+       
+
+  };
+ // console.log(indexHash);
+
+
+var imgLink;
+var rootRef2 =firebase.database().ref().child('HyperDetailed/'+indexHash+"/"+ keyHsh).orderByChild("no");
+
+rootRef2.once('value', function(snapshot2) {
+    
+       var part1 = snapshot2.val().part1;
+    var part2 = snapshot2.val().part2;
+ var imgno = snapshot2.val().imgno;
+  var logo = snapshot2.val().logo;
+
+ var name = snapshot2.val().name;
+  var city = snapshot2.val().city;
+ var details = snapshot2.val().details;
+ var ar = snapshot2.val().ar;
+
+          imgLink =part1 +part2;
+
+ var titleDiv = document.getElementById("titleDiv");
+  var titleItem = ' <h4 class="my-4">'+name+' </h4>\
+        <h5 class="my-4">'+city+"<br/>"+ar+"<br/>"+details+'</h5>';
+  
+  titleDiv.innerHTML=titleItem;
+   
+        /*
+snapshot2.forEach(function(childSnapshot2) {
+var childKey2 = childSnapshot2.key;
+var childData2 = childSnapshot2.val();
+
+
+
+ 
+       
+  
+   
+ });*/
+
+ 
+  
+  var i  = 0;
+  var n =1;
+      for (i=0;i<imgno;i++){
+          
+          var img= imgLink+"/mmd-0"+i+".jpg";
+        console.log("Link "+imgLink+"/mmd-0"+i+".jpg");
+ 
+      var sliderDiv= document.getElementById("sliderDiv");
+ var slideItem = ' <div class="mySlides "> <div class="numbertext">'+n+++' / '+imgno+'</div>\
+              <img src="'+img+'" style="width:100%">\
+              <div class="text">Caption Text</div></div>';
+    
+    var dotsDiv = document.getElementById('dotsDiv');
+    var dotsItem ='<span class="dot" onclick="currentSlide('+i+')"></span> ';
+    
+    dotsDiv.innerHTML+=dotsItem;
+        
+      sliderDiv.innerHTML+=slideItem;
+       
+       console.log(sliderDiv);
+       showSlides();
+   }
+   
+    });
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1;}    
+              if (n < 1) {slideIndex = slides.length;   }
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+        
+             for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+
+  
+  
+  
+   function errorFunction(){
+        
+        
+                   document.getElementById('logoid').src="finished.jpg";
+  document.getElementById("testP").innerHTML = "The image could not be loaded.";
+
+        
+        
+    }
+</script>
+  <!-- Bootstrap core JavaScript -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
