@@ -37,6 +37,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Oman Offers - عروض سلطنة عمان </a>
+            <a href="https://www.buymeacoffee.com/mmdarwish" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -260,8 +262,13 @@ var childData2 = childSnapshot2.val();
   var n =1;
       for (i=0;i<imgno;i++){
           
-          var img= imgLink+"/mmd-0"+i+".jpg";
-        console.log("Link "+imgLink+"/mmd-0"+i+".jpg");
+if(i<10){
+            var img= imgLink+"/mmd-0"+i+".jpg";
+
+          }else if(i>9){
+            var img= imgLink+"/mmd-"+i+".jpg";
+
+          }        console.log("Link "+imgLink+"/mmd-0"+i+".jpg");
  
       var sliderDiv= document.getElementById("sliderDiv");
  var slideItem = ' <div class="mySlides "> <div class="numbertext">'+n+++' / '+imgno+'</div>\
