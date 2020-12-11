@@ -140,6 +140,7 @@
           -->
         <div class="row" id="div" >
         
+		
     <!-- 
     
           <div class="col-lg-4 col-md-6 mb-4"  >
@@ -230,7 +231,17 @@
 -->
         </div>
           
-       
+		   <div class="row" ></div>
+		 <h2>Most recent Offers <h2/>
+
+      </div>
+       <div class="list-group" id="cat2">
+	   
+         <!--  <a href="#" class="list-group-item">Category 1</a>
+         <a href="#" class="list-group-item">Category 2</a>
+          <a href="#" class="list-group-item">Category 3</a>
+       -->
+        </div>
           <div class="row" id="div2"></div>
         <!-- /.row -->
 
@@ -253,6 +264,7 @@
           <a href="#" class="list-group-item">Category 3</a>
        -->
         </div>
+		 
 
       </div>
     </div>
@@ -415,6 +427,12 @@ var childData2 = childSnapshot2.val();
 //  document.getElementById('h3').innerText=name; 
 
 
+
+//side menu 
+  var catItem2 ='  <a href="slideShow.html'+'?'+childKey2+'#'+index +'" class="list-group-item list-group-item-action">'+name+"<br>"+ar+"<br>"+city+"<br>"+details+'</a>';
+
+var cat2 = document.getElementById('cat2') ;
+        cat2.innerHTML+=catItem2;
  var lines = ' <div class="col-lg-4 col-md-6 mb-4">\
 <div class="card h-100" > \
               <a href="slideShow.html'+'?'+childKey2+'#'+index +'"><img class="card-img-top" src="' +logo+'" alt=""></a> \
