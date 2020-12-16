@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.js" integrity="sha512-TtLC7VxmsBn2S6vL3Ib403LU+Gf8cH4wf7UdOxRBRKVrtLXPjA5Tv4/hY7BwIeGAJ/YKNjRtjG4nTzYD/snZOQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js" integrity="sha512-vv3EN6dNaQeEWDcxrKPFYSFba/kgm//IUnvLPMPadaUf5+ylZyx4cKxuc4HdBf0PPAlM7560DV63ZcolRJFPqA==" crossorigin="anonymous"></script>
+  </head>
+
+
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+
+// var pdfMake = require('pdfmake/build/pdfmake.js');
+// var pdfFonts = require('pdfmake/build/vfs_fonts.js');
+// pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+// Define font files
+var fonts = {
+  Roboto: {
+    normal: 'fonts/Roboto-Regular.ttf',
+    bold: 'fonts/Roboto-Medium.ttf',
+    italics: 'fonts/Roboto-Italic.ttf',
+    bolditalics: 'fonts/Roboto-MediumItalic.ttf'
+  }
+};
+
+
+var docDefinition = {
+  content: [
+    
+    
+  {
+			image: 'snow',
+			// height: 400,
+		},
+
+  
+  
+  ],
+  images: {
+		// bee: testImageDataUrl,
+		snow: 'https://offers-10.firebaseapp.com/grand43/mmd-00.jpg',
+	}
+
+};
+
+
+
+// pdfMake.createPdf(docDefinition).download();
+
+pdfMake.createPdf(docDefinition).open({}, window);
+
+
+// const pdfDocGenerator = pdfMake.createPdf(docDefinition);
+// pdfDocGenerator.getBuffer((buffer) => {
+	
+// });
+
+  
+</script>
+    <!-- <script type="text/javascript">
+        $(document).ready(function() {
+                var url ='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png';
+                var getImageFromUrl = function(url, callback) {
+                var img = new Image();
+                img.onError = function() {
+                alert('Cannot load image: "'+url+'"');
+                };
+                img.onload = function() {
+                callback(img);
+                };
+                img.src = url;
+                }
+                var createPDF = function(imgData) {
+                var doc = new jsPDF('p', 'pt', 'a4');
+                var width = doc.internal.pageSize.width;    
+                var height = doc.internal.pageSize.height;
+                var options = {
+                     pagesplit: true
+                };
+                doc.text(10, 20, 'Crazy Monkey');
+                var h1=50;
+                var aspectwidth1= (height-h1)*(9/16);
+                doc.addImage(imgData, 'JPEG', 10, h1, aspectwidth1, (height-h1), 'monkey');
+                doc.addPage();
+                doc.text(10, 20, 'Hello World');
+                var h2=30;
+                var aspectwidth2= (height-h2)*(9/16);
+                doc.addImage(imgData, 'JPEG', 10, h2, aspectwidth2, (height-h2), 'monkey');
+                doc.output('datauri');
+            }
+                getImageFromUrl('thinking-monkey.jpg', createPDF);
+                });
+    </script> -->
+  </body>
+</html>
