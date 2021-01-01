@@ -406,18 +406,18 @@ function checkIndex(){
             /* serial = childSnapshot2.val().no; */
                 /* console.log(index+'  '+no); */
                 /* no--; */
-                if(i==index){
+                /* if(i==index){
 
                     
                  document.getElementById("indexID").innerText=index;
 
-                    /* serial--; */
-                /* document.getElementById("indexID").innerText=no; */
+                    serial--; 
+                document.getElementById("indexID").innerText=no;
                 
-                /* console.log(no); */
+                console.log(no);
 
-                /* rootRef2.child("no").set(serial) */
-                    }
+                 rootRef2.child("no").set(serial)
+                    } */
                
 
                    
@@ -584,29 +584,31 @@ var serial;
       function getSerial(key){
             var i = document.getElementById("hyperName").value;
            var x = document.getElementById("hyperKey").value;
-                var rootRef2 =firebase.database().ref().child('Index/').orderByChild("no").limitToFirst(1);
+             var rootRef5 =firebase.database().ref().child('Index').orderByChild("no").limitToFirst(1);
+             
+
+             rootRef5.once('value', function(snapshot5) {
+              /* var childData5 = snapshot5.val();
+              var childlogo = snapshot5.val().logo;
 
 
-            rootRef2.once('value', function(snapshot2) {
+                console.log(childData5); */
+             
                
-               
-                snapshot2.forEach(function(childSnapshot2) {
+                snapshot5.forEach(function(childSnapshot2) {
             var childKey2 = childSnapshot2.key;
-            var childData2 = childSnapshot2.val();
-            
-            var no = childSnapshot2.val().no;
-            childData2--;
-                
-             console.log(childData2);
-      
-                document.getElementById("no").innerText=childData2;   
-                firebase.database().ref().child('Index/').child(key).child('no').set(childData2);
+            var childNo = childSnapshot2.child("no").val();
+            childNo--;
+            console.log(childNo+'  '+childKey2);
 
+            var rootRef6 =firebase.database().ref().child('Index').child(key);
+
+            rootRef6.child("no").set(childNo);   
 
               });
 
 
- 
+
              
              
         
@@ -617,37 +619,39 @@ var serial;
         }     
 
         function getSerialDecrease(key){
-            var i = document.getElementById("hyperName").value;
+          var i = document.getElementById("hyperName").value;
            var x = document.getElementById("hyperKey").value;
-                var rootRef2 =firebase.database().ref().child('Index/').orderByChild("no").limitToFirst(1);
+             var rootRef5 =firebase.database().ref().child('Index').orderByChild("no").limitToFirst(1);
+             
+
+             rootRef5.once('value', function(snapshot5) {
+              /* var childData5 = snapshot5.val();
+              var childlogo = snapshot5.val().logo;
 
 
-            rootRef2.once('value', function(snapshot2) {
+                console.log(childData5); */
+             
                
-               
-                snapshot2.forEach(function(childSnapshot2) {
+                snapshot5.forEach(function(childSnapshot2) {
             var childKey2 = childSnapshot2.key;
-            var childData2 = childSnapshot2.val();
-            
-            var no = childSnapshot2.val().no;
-            childData2++;
-                
-             console.log(childData2);
-      
-                document.getElementById("no").innerText=childData2;   
-                firebase.database().ref().child('Index/').child(key).child('no').set(childData2);
+            var childNo = childSnapshot2.child("no").val();
+            childNo++;
+            console.log(childNo+'  '+childKey2);
 
+            var rootRef6 =firebase.database().ref().child('Index').child(key);
+
+            rootRef6.child("no").set(childNo);   
 
               });
 
 
- 
+
              
              
         
 
 
-            });     
+            });      
 
         }  
 
@@ -734,6 +738,8 @@ var serial;
    
 
        }
+       
+
        
        
    /*    function getSerial(i,x){
