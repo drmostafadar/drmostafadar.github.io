@@ -175,6 +175,10 @@ input[type=button]:hover {
         <input type="button" value="New Item" onclick="newItem()">
 
         </div>
+        <div class="col-xs-2 pl-1" >
+        <input type="button" value="New Item-New" onclick="newItem2()">
+
+        </div>
 
         
   </form>
@@ -401,9 +405,7 @@ function checkIndex(){
               });
                    });
 
-	                   getSerial();
-
-
+                   getSerial();
 
     
 }
@@ -509,7 +511,12 @@ function checkIndex(){
             });     
 
         }     
+
+
+
+
        function newItem(){
+           
            
            
 
@@ -523,8 +530,8 @@ function checkIndex(){
             var childKey2 = childSnapshot2.key;
             var childData2 = childSnapshot2.val();
             
-            var no = childSnapshot2.val().no;
-                  //  console.log(no);
+            /* var no = childSnapshot2.val().no; */
+                  /* //  console.log(no); */
 
             var keyPlus = childKey2;
             if(childKey2>childKey2-1){
@@ -541,7 +548,6 @@ function checkIndex(){
                 //  no--;
                 // rootRef2.child("no").set(no) ;
 
-                    console.log(no);
                 }*/
                 });
                 
@@ -561,16 +567,18 @@ function checkIndex(){
      var  details=   document.getElementById("details").value;
 
         var  pdf=  parseInt(document.getElementById("pdf").textContent) ;
-        var  no=   parseInt(document.getElementById("no").textContent);
+        /* var  no=   parseInt(document.getElementById("no").textContent); */
         var  logo=   document.getElementById("logo").textContent;
              var  name=   document.getElementById("name").textContent;
 
         // var  imgno=  parseInt(document.getElementById("imgno").textContent);
 
+                /* --no;
+        console.log(no); */
 
-
+        
             var rootRef2 =firebase.database().ref().child('HyperDetailed/').child(i).child(x);
-
+            addNo(i,x);
                 rootRef2.child("ar").set(ar) ;
                  rootRef2.child("city").set(city) ;
                 rootRef2.child("imgno").set(imgno) ;
@@ -582,16 +590,54 @@ function checkIndex(){
                 rootRef2.child("pdf").set(pdf) ;
                 rootRef2.child("logo").set(logo) ;
                 rootRef2.child("details").set(details) ;
-          rootRef2.child("no").set(no) ;
-
-                
+          /* rootRef2.child("no").set(no) ; */
+         
+          
          
             });
    
-
+            
        }
        
        
+
+
+       function addNo(i,x){
+            /* var i = document.getElementById("hyperName").value;
+           var x = document.getElementById("hyperKey").value; */
+             var rootRef5 =firebase.database().ref().child('HyperDetailed').child(i).orderByChild("no").limitToFirst(1);
+             
+
+             rootRef5.once('value', function(snapshot5) {
+              /* var childData5 = snapshot5.val();
+              var childlogo = snapshot5.val().logo;
+
+
+                console.log(childData5); */
+             
+               
+                snapshot5.forEach(function(childSnapshot2) {
+            var childKey2 = childSnapshot2.key;
+            var childNo = childSnapshot2.child("no").val();
+            childNo--;
+            console.log(childNo+'  '+childKey2);
+
+            var rootRef6 =firebase.database().ref().child('HyperDetailed').child(i).child(x);
+
+            rootRef6.child("no").set(childNo);   
+
+              });
+
+
+
+             
+             
+        
+
+
+            });     
+
+        }  
    /*    function getSerial(i,x){
            
            
@@ -711,6 +757,9 @@ var database = firebase.database();
         
     }
 </script>
+
+
+
 
 </body>
 </html>
