@@ -375,7 +375,7 @@ function checkIndex(){
 
             var i = document.getElementById("hyperName").value;
 
-           var rootRef2 =firebase.database().ref().child('Index/');
+           var rootRef2 =firebase.database().ref().child('QatarIndex/');
 
            rootRef2.once('value', function(snapshot2) {
            snapshot2.forEach(function(childSnapshot2) {
@@ -455,7 +455,7 @@ function decreaseIndex(){
 
  var i = document.getElementById("hyperName").value;
 
-var rootRef2 =firebase.database().ref().child('Index/');
+var rootRef2 =firebase.database().ref().child('QatarIndex/');
 
 rootRef2.once('value', function(snapshot2) {
 snapshot2.forEach(function(childSnapshot2) {
@@ -520,7 +520,7 @@ var serial;
             var i = document.getElementById("hyperName").value;
            var x = document.getElementById("hyperKey").value;
 
-            var rootRef2 =firebase.database().ref().child('Details/').child(i).child(x);
+            var rootRef2 =firebase.database().ref().child('QatarDetails/').child(i).child(x);
 
             rootRef2.once('value', function(snapshot2) {
                  var name = snapshot2.val().name;
@@ -584,7 +584,7 @@ var serial;
       function getSerial(key){
             var i = document.getElementById("hyperName").value;
            var x = document.getElementById("hyperKey").value;
-             var rootRef5 =firebase.database().ref().child('Index').orderByChild("no").limitToFirst(1);
+             var rootRef5 =firebase.database().ref().child('QatarIndex').orderByChild("no").limitToFirst(1);
              
 
              rootRef5.once('value', function(snapshot5) {
@@ -601,7 +601,7 @@ var serial;
             childNo--;
             console.log(childNo+'  '+childKey2);
 
-            var rootRef6 =firebase.database().ref().child('Index').child(key);
+            var rootRef6 =firebase.database().ref().child('QatarIndex').child(key);
 
             rootRef6.child("no").set(childNo);   
 
@@ -621,7 +621,7 @@ var serial;
         function getSerialDecrease(key){
           var i = document.getElementById("hyperName").value;
            var x = document.getElementById("hyperKey").value;
-             var rootRef5 =firebase.database().ref().child('Index').orderByChild("no").limitToFirst(1);
+             var rootRef5 =firebase.database().ref().child('QatarIndex').orderByChild("no").limitToFirst(1);
              
 
              rootRef5.once('value', function(snapshot5) {
@@ -638,7 +638,7 @@ var serial;
             childNo++;
             console.log(childNo+'  '+childKey2);
 
-            var rootRef6 =firebase.database().ref().child('Index').child(key);
+            var rootRef6 =firebase.database().ref().child('QatarIndex').child(key);
 
             rootRef6.child("no").set(childNo);   
 
@@ -662,7 +662,7 @@ var serial;
            
 
             var i = document.getElementById("hyperName").value;
-            var rootRef2 =firebase.database().ref().child('Details/').child(i);
+            var rootRef2 =firebase.database().ref().child('QatarDetails/').child(i);
 
             rootRef2.once('value', function(snapshot2) {
            
@@ -717,7 +717,7 @@ var serial;
 
 
 
-            var rootRef2 =firebase.database().ref().child('Details/').child(i).child(x);
+            var rootRef2 =firebase.database().ref().child('QatarDetails/').child(i).child(x);
 
                 rootRef2.child("ar").set(ar) ;
                  rootRef2.child("city").set(city) ;
@@ -745,8 +745,8 @@ var serial;
    /*    function getSerial(i,x){
            
            
-                var rootRef3 =firebase.database().ref().child('Details/').child(i).orderByChild("no").limitToFirst(1);
-            var rootRef4 =firebase.database().ref().child('Details/').child(i).child(x);
+                var rootRef3 =firebase.database().ref().child('QatarDetails/').child(i).orderByChild("no").limitToFirst(1);
+            var rootRef4 =firebase.database().ref().child('QatarDetails/').child(i).child(x);
 
             rootRef3.once('value', function(snapshot3) {
            
@@ -784,7 +784,7 @@ var serial;
         var  no=   parseInt(document.getElementById("no").textContent);
 
 
-            var rootRef2 =firebase.database().ref().child('Details/').child(i).child(x);
+            var rootRef2 =firebase.database().ref().child('QatarDetails/').child(i).child(x);
 
                 rootRef2.child("ar").set(ar) ;
                  rootRef2.child("city").set(city) ;
@@ -814,7 +814,7 @@ var serial;
         var  no=   parseInt(document.getElementById("no").textContent);
 
 
-            var rootRef2 =firebase.database().ref().child('Details/').child(i).child(x);
+            var rootRef2 =firebase.database().ref().child('QatarDetails/').child(i).child(x);
 			rootRef2.remove();
 
               /*  rootRef2.child("ar").set(ar) ;
@@ -839,7 +839,7 @@ var database = firebase.database();
        var x = document.getElementById("hyperKey").value;
 
   
-  firebase.database().ref('Details/' + name).set({
+  firebase.database().ref('QatarDetails/' + name).set({
     username: x
     /*email: email,
     profile_picture : imageUrl*/
