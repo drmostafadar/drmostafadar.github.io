@@ -618,7 +618,8 @@ function checkIndex(){
                
                 snapshot5.forEach(function(childSnapshot2) {
             var childKey2 = childSnapshot2.key;
-            var childNo = childSnapshot2.child("no").val();
+			var childNo = childSnapshot2.val().no;
+//             var childNo = childSnapshot2.child("no").val();
 //             childNo--;
             console.log(childNo+'  '+childKey2);
 
