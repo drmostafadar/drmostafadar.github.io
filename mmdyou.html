@@ -56,4 +56,26 @@
       resultDiv.innerHTML = "⏳ Please wait...";
 
       try {
-        const response =
+        const response = await fetch("https://56552c73-8826-40b0-9005-991807e2fd9d-00-2ahk96nrjds4t.sisko.replit.dev/get_download_link", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ url: url })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          resultDiv.innerHTML = `<p>🎉 Title: <strong>${data.title}</strong></p>
+          <p><a href="${data.download_url}" target="_blank" download>⬇️ Click here to download</a></p>`;
+        } else {
+          resultDiv.innerHTML = `<p style="color:red;">❌ Error: ${data.error}</p>`;
+        }
+      } catch (err) {
+        resultDiv.innerHTML = `<p style="color:red;">❌ Request failed: ${err.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
